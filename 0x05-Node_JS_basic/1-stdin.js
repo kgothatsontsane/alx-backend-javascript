@@ -6,3 +6,6 @@ process.stdin.on('data', function(data) {
 process.on('exit', function() {
     console.log('This important software is now closing\n');
 });
+process.stdin.on('end', function() {
+    process.exit();
+});
